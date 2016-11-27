@@ -4,12 +4,25 @@ Get info and download MP3 audio from youtube videos in node.js using horizon-you
 
 I developed this module to simplify how you convert a video directly to mp3. It was developed for a project called Horizon Mp3 Converter which will be available soon for online use.
 
+### Prerequisites
+
+#### ffmpeg and ffprobe
+
+fluent-ffmpeg requires ffmpeg >= 0.9 to work.  It may work with previous versions but several features won't be available (and the library is not tested with lower versions anylonger).
+
+If the `FFMPEG_PATH` environment variable is set, fluent-ffmpeg will use it as the full path to the `ffmpeg` executable.  Otherwise, it will attempt to call `ffmpeg` directly (so it should be in your `PATH`).  You must also have ffprobe installed (it comes with ffmpeg in most distributions).  Similarly, fluent-ffmpeg will use the `FFPROBE_PATH` environment variable if it is set, otherwise it will attempt to call it in the `PATH`.
+
+Most features should work when using avconv and avprobe instead of ffmpeg and ffprobe, but they are not officially supported at the moment.
+
+**Windows users**: most probably ffmpeg and ffprobe will _not_ be in your `%PATH`, so you _must_ set `%FFMPEG_PATH` and `%FFPROBE_PATH`.
+
+**Debian/Ubuntu users**: the official repositories have the ffmpeg/ffprobe executable in the `libav-tools` package, and they are actually rebranded avconv/avprobe executables (avconv is a fork of ffmpeg).  They should be mostly compatible, but should you encounter any issue, you may want to use the real ffmpeg instead.  You can either compile it from source or find a pre-built .deb package at https://ffmpeg.org/download.html (For Ubuntu, the `ppa:jon-severinsson/ffmpeg` PPA provides recent builds).
+
 ## Main features
 
 - Convert video from youtube in mp3 files (128 kBit/s) in realtime.
 - Auto delete files from server after Download
 - When used to download on server, it supports downloading the same audio without overwriting another (if 2 or more people are downloading the same audio).
-- FFmpeg installed is necessary!
 
 With [npm](https://www.npmjs.com/) do:
 
