@@ -70,6 +70,15 @@ horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", downloadPath, null, f
     //Your code here...
 });
 ```
+<p align="left">
+  <img src="https://github.com/Wpdas/horizon-youtube-mp3/blob/master/blop/print1.png" width="500"/>
+</p>
+
+After complete download (mySound.mp3 file):
+
+<p align="left">
+  <img src="https://github.com/Wpdas/horizon-youtube-mp3/blob/master/blop/print2.png" width="200"/>
+</p>
 
 ### Use for server-side processing and client-side downloading
 
@@ -99,6 +108,24 @@ server.listen(3000);
 console.log("Server running!");
 console.log("Put on browser: http://localhost:3000/?youtubeURL=http://youtube.com/watch?v=NEA0BLnpOtg");
 ```
+
+<p align="left">
+  <img src="https://github.com/Wpdas/horizon-youtube-mp3/blob/master/blop/print4.png" width="500"/>
+</p>
+
+Process with unique id on server side:
+
+
+<p align="left">
+  <img src="https://github.com/Wpdas/horizon-youtube-mp3/blob/master/blop/print3.png" width="200"/>
+</p>
+
+After that, the browser opens a window asking the client where he wants to save the file.
+
+
+<p align="left">
+  <img src="https://github.com/Wpdas/horizon-youtube-mp3/blob/master/blop/print5.png" width="500"/>
+</p>
 
 # License
 MIT
