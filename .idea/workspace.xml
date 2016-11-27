@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e089e0ca-b6a7-4682-ad09-217cbf71586a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -86,52 +87,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="horizon-youtube-mp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="horizon-youtube-mp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="horizon-youtube-mp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="horizon-youtube-mp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shortid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="horizon-youtube-mp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="horizon-youtube-mp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -184,6 +139,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -218,23 +179,24 @@
       <option name="presentableId" value="Default" />
       <updated>1480272441015</updated>
       <workItem from="1480272443662" duration="67000" />
-      <workItem from="1480272542982" duration="1753000" />
+      <workItem from="1480272542982" duration="2080000" />
+      <workItem from="1480279493236" duration="2113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1820000" />
+    <option name="totallyTimeSpent" value="4260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31075698" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30958903" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -266,12 +228,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="255">
             <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -281,7 +250,138 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-103">
           <caret line="52" column="2" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/fluent-ffmpeg/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/fluent-ffmpeg/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/fluent-ffmpeg/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/fluent-ffmpeg/.npmignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/fluent-ffmpeg/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/fluent-ffmpeg/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1462047272000" expanded="true" signature="8363:8382" ph="/*...*/" />
+              <marker date="1462047272000" expanded="true" signature="8441:8475" ph="/*...*/" />
+              <marker date="1462047272000" expanded="true" signature="8652:8724" ph="[...]" />
+              <marker date="1462047272000" expanded="true" signature="11781:11916" ph="[...]" />
+              <marker date="1462047272000" expanded="true" signature="11787:11839" ph="{&quot;filter&quot;: 'volume'...}" />
+              <marker date="1462047272000" expanded="true" signature="11845:11912" ph="{&quot;filter&quot;: 'silencedetect'...}" />
+              <marker date="1462047272000" expanded="true" signature="11969:12023" ph="{&quot;filter&quot;: 'volume'...}" />
+              <marker date="1462047272000" expanded="true" signature="12029:12103" ph="{&quot;filter&quot;: 'silencedetect'...}" />
+              <marker date="1462047272000" expanded="true" signature="14622:14757" ph="[...]" />
+              <marker date="1462047272000" expanded="true" signature="14628:14682" ph="{&quot;filter&quot;: 'fade'...}" />
+              <marker date="1462047272000" expanded="true" signature="14688:14753" ph="{&quot;filter&quot;: 'pad'...}" />
+              <marker date="1462047272000" expanded="true" signature="14812:14870" ph="{&quot;filter&quot;: 'fade'...}" />
+              <marker date="1462047272000" expanded="true" signature="14876:14972" ph="{&quot;filter&quot;: 'filter2'...}" />
+              <marker date="1462047272000" expanded="true" signature="18360:18750" ph="//..." />
+              <marker date="1462047272000" expanded="true" signature="19141:19563" ph="//..." />
+              <marker date="1462047272000" expanded="true" signature="22584:22629" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="24523:24542" ph="/*...*/" />
+              <marker date="1462047272000" expanded="true" signature="24602:24636" ph="/*...*/" />
+              <marker date="1462047272000" expanded="true" signature="24815:24887" ph="[...]" />
+              <marker date="1462047272000" expanded="true" signature="26042:26258" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="26422:26464" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="28420:29815" ph="[...]" />
+              <marker date="1462047272000" expanded="true" signature="28575:28670" ph="{&quot;filter&quot;: 'split'...}" />
+              <marker date="1462047272000" expanded="true" signature="28756:28846" ph="{&quot;filter&quot;: 'lutrgb'...}" />
+              <marker date="1462047272000" expanded="true" signature="28932:29024" ph="{&quot;filter&quot;: 'lutrgb'...}" />
+              <marker date="1462047272000" expanded="true" signature="29110:29201" ph="{&quot;filter&quot;: 'lutrgb'...}" />
+              <marker date="1462047272000" expanded="true" signature="29208:29303" ph="//..." />
+              <marker date="1462047272000" expanded="true" signature="29308:29408" ph="{&quot;filter&quot;: 'pad'...}" />
+              <marker date="1462047272000" expanded="true" signature="29415:29507" ph="//..." />
+              <marker date="1462047272000" expanded="true" signature="29512:29626" ph="{&quot;filter&quot;: 'overlay'...}" />
+              <marker date="1462047272000" expanded="true" signature="29695:29810" ph="{&quot;filter&quot;: 'overlay'...}" />
+              <marker date="1462047272000" expanded="true" signature="30246:30315" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="30782:30882" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="32025:32093" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="32376:32430" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="33066:33128" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="33485:33534" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="33995:34054" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="34080:34127" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="34756:34815" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="34841:34888" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="35289:35348" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="35374:35421" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="35492:35558" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="36281:36340" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="36366:36413" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="36801:36860" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="36886:36930" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="40195:40375" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="40292:40369" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="40471:40577" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="40506:40554" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="41193:41218" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="41419:41449" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="41796:41860" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="41958:42022" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="42851:45766" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="42866:45103" ph="[...]" />
+              <marker date="1462047272000" expanded="true" signature="42872:44047" ph="{&quot;codec_name&quot;: &quot;h264&quot;...}" />
+              <marker date="1462047272000" expanded="true" signature="43627:43900" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="43916:44041" ph="{&quot;creation_time&quot;: &quot;1970-01-01 00:00:00&quot;...}" />
+              <marker date="1462047272000" expanded="true" signature="44053:45099" ph="{&quot;codec_name&quot;: &quot;aac&quot;...}" />
+              <marker date="1462047272000" expanded="true" signature="44679:44952" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="44968:45093" ph="{&quot;creation_time&quot;: &quot;1970-01-01 00:00:00&quot;...}" />
+              <marker date="1462047272000" expanded="true" signature="45117:45764" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="45449:45760" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="46022:46086" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="46138:46200" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="46256:46322" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="46376:46440" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="46722:46830" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="46737:46821" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="47061:47264" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="47076:47255" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="48247:48477" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="48269:48468" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="48766:48988" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="48783:48979" ph="{...}" />
+              <marker date="1462047272000" expanded="true" signature="51541:51634" ph="/** ... ...*/" />
+              <marker date="1462047272000" expanded="true" signature="51682:51715" ph="/** ... ...*/" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
