@@ -1,0 +1,35 @@
+{
+  "name": "horizon-youtube-mp3",
+  "version": "1.0.0",
+  "description": "Search for video information and download mp3 file through video.",
+  "main": "./lib/index.js",
+  "author": {
+    "name": "Wenderson Pires",
+    "email": "wendersonpdas@gmail.com",
+    "url": "https://www.linkedin.com/in/wenderson-pires-silva"
+  },
+  "dependencies": {
+    "fluent-ffmpeg": "latest",
+    "shortid": "latest",
+    "ytdl-core": "latest"
+  },
+  "keywords": [
+    "youtube",
+    "mp3",
+    "converter",
+    "conversor",
+    "audio",
+    "to",
+    "download"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/Wpdas/horizon-youtube-mp3/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wpdas/horizon-youtube-mp3"
+  }
+}
