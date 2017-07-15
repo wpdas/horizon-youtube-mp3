@@ -1,12 +1,17 @@
 {
   "name": "horizon-youtube-mp3",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "Search for video information and download mp3 file through video.",
   "main": "./lib/index.js",
   "author": {
     "name": "Wenderson Pires",
     "email": "wendersonpdas@gmail.com",
     "url": "https://www.linkedin.com/in/wenderson-pires-silva"
+  },
+  "scripts": {
+    "example-download": "node example/downloadmp3",
+    "example-info": "node example/videoinfo",
+    "example-server": "node example/serverdownloadmp3"
   },
   "dependencies": {
     "fluent-ffmpeg": "~2.1.0",
