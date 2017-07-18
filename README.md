@@ -4,6 +4,9 @@ Get info and download MP3 audio from youtube videos in node.js using horizon-you
 
 I developed this module to simplify how you convert a video directly to mp3. It was developed for a project called Horizon Mp3 Converter which will be available soon for online use.
 
+### Main Online App using this module:
+[YouTube Transfer](https://www.youtubetransfer.com/)
+
 ### Prerequisites
 
 #### ffmpeg and ffprobe
@@ -78,8 +81,6 @@ var horizon = require('horizon-youtube-mp3');
 var path = require('path');
 var http = require("http");
 var url  = require('url') ;
-
-var downloadPath = path.join(__dirname); //Path in your server to alocate temporaly file
 
 var server = http.createServer(function(request, response) {
 
