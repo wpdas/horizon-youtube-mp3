@@ -25,8 +25,9 @@ Most features should work when using avconv and avprobe instead of ffmpeg and ff
 
 ## Main features
 
-- Convert video from youtube in mp3 files (128 kBit/s) in realtime.
-- Auto delete files from server after Download
+- Convert video from youtube in mp3 files (128 kBit/s) in realtime;
+- Pipe stream of converted bytes;
+- Crop time (start and end time);
 - When used to download on server, it supports downloading the same audio without overwriting another (if 2 or more people are downloading the same audio).
 
 With [npm](https://www.npmjs.com/) do:
@@ -42,7 +43,7 @@ npm install horizon-youtube-mp3
 horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(data){...});
 ```
 
-**download(url:String, res?:Response, name?:String, cropParams?:Object, callback:Function):Object** => Get information from video.
+**download(url:String, res?:Response, name?:String, cropParams?:Object, callback:Function):Object** => Download a converted MP3 file.
 ``` js
 horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, function(){//On Conversion Complete});
 ```
