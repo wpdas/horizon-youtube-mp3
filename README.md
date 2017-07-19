@@ -35,7 +35,19 @@ With [npm](https://www.npmjs.com/) do:
 npm install horizon-youtube-mp3
 ```
 
-## Usage
+## API
+
+**getInfo(url:String, callback:Function):Object** => Get information from video.
+``` js
+horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(data){...});
+```
+
+**download(url:String, res?:Response, name?:String, cropParams?:Object, callback:Function):Object** => Get information from video.
+``` js
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, function(){//On Conversion Complete});
+```
+
+## Usage Example
 ### Get info from video.
 
 ``` js
@@ -68,9 +80,9 @@ var downloadPath = path.join(__dirname);
 var fileName = "mySound.mp3"; //Optional. The file automatically have the video name.
 
 
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", downloadPath, null, fileName, function(e){
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, null, function(e){
 
-    console.log(e); //Will return: "Downloading file complete!"
+    console.log(e); //Will return: "Conversion file complete!"
 
     //Your code here...
 });
@@ -86,11 +98,12 @@ var url  = require('url') ;
 
 var server = http.createServer(function(request, response) {
 
-    var paramsUrl = url.parse(request.url, true).query;
+    let paramsUrl = url.parse(request.url, true).query;
     console.log("URL Video: " + paramsUrl.youtubeURL);
 
+    let cropParams = {start:'02:15', end:'02:20'}; //Optional
 
-    horizon.download(paramsUrl.youtubeURL, response, null, function(e){
+    horizon.download(paramsUrl.youtubeURL, response, null, cropParams, function(e){
 
         console.log(e); //Will return: "Downloading file complete!"
 
