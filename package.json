@@ -1,6 +1,6 @@
 {
   "name": "horizon-youtube-mp3",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Search for video information and download mp3 file through video.",
   "main": "./lib/index.js",
   "author": {
@@ -11,9 +11,11 @@
   "scripts": {
     "example-download": "node example/downloadmp3",
     "example-info": "node example/videoinfo",
-    "example-server": "node example/serverdownloadmp3"
+    "example-server": "node example/serverdownloadmp3",
+    "test": "eslint lib/**"
   },
   "dependencies": {
+    "console-log-level": "^1.4.0",
     "fluent-ffmpeg": "^2.1.2",
     "hh-mm-ss": "^1.1.0",
     "remove-accents": "^0.4.0",
@@ -33,5 +35,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Wpdas/horizon-youtube-mp3"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.0"
   }
 }
