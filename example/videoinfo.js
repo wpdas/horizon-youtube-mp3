@@ -4,7 +4,7 @@
 
 var horizon = require('../lib/index');
 
-horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(e){
+horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, e){
 
     console.log(e);
 

@@ -40,12 +40,12 @@ npm install horizon-youtube-mp3
 
 **getInfo(url:String, callback:Function):Object** => Get information from video.
 ``` js
-horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(data){...});
+horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, data){...});
 ```
 
 **download(url:String, res?:Response, name?:String, cropParams?:Object, callback:Function):Object** => Download a converted MP3 file.
 ``` js
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, function(){//On Conversion Complete});
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, function(err, result){//On Conversion Complete});
 ```
 
 ## Usage Example
@@ -54,7 +54,7 @@ horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {star
 ``` js
 var horizon = require('horizon-youtube-mp3');
 
-horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(e){
+horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, e){
 
     console.log(e);
 
@@ -68,25 +68,6 @@ horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(e){
      *   videoTimeSec: 155,
      *   videoFile: 'https://....'}
      */
-});
-```
-
-
-### Simple mp3 file download
-
-``` js
-var horizon = require('horizon-youtube-mp3');
-var path = require('path');
-
-var downloadPath = path.join(__dirname);
-var fileName = "mySound.mp3"; //Optional. The file automatically have the video name.
-
-
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, null, function(e){
-
-    console.log(e); //Will return: "Conversion file complete!"
-
-    //Your code here...
 });
 ```
 
@@ -105,7 +86,7 @@ var server = http.createServer(function(request, response) {
 
     let cropParams = {start:'02:15', end:'02:20'}; //Optional
 
-    horizon.download(paramsUrl.youtubeURL, response, null, cropParams, function(e){
+    horizon.download(paramsUrl.youtubeURL, response, null, cropParams, function(err, e){
 
         console.log(e); //Will return: "Downloading file complete!"
 

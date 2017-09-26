@@ -9,9 +9,9 @@ var downloadPath = path.join(__dirname);
 var fileName = "mySound.mp3"; //Optional. The file automatically have the video name.
 
 
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", null, fileName, function(e){
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", null, fileName, function(err, result){
 
-    console.log(e); //Will return: "Downloading file complete!"
+    console.log(result); //Will return: "Conversion file complete!"
 
     //Your code here...
 });

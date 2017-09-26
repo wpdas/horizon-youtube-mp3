@@ -1,6 +1,6 @@
 {
   "name": "horizon-youtube-mp3",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Search for video information and download mp3 file through video.",
   "main": "./lib/index.js",
   "author": {
@@ -9,7 +9,6 @@
     "url": "https://www.linkedin.com/in/wenderson-pires-silva"
   },
   "scripts": {
-    "example-download": "node example/downloadmp3",
     "example-info": "node example/videoinfo",
     "example-server": "node example/serverdownloadmp3",
     "test": "eslint lib/**"

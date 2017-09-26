@@ -14,7 +14,7 @@ var server = http.createServer(function(request, response) {
 
 
     //horizon.download(paramsUrl.youtubeURL, response, null, null, function(e){
-    horizon.download(paramsUrl.youtubeURL, response, null, {start:'02:15', end:'02:20'}, function(e){
+    horizon.download(paramsUrl.youtubeURL, response, null, {start:'02:15', end:'02:20'}, function(err, e){
 
         console.log(e); //Will return: "Downloading file complete!"
 
