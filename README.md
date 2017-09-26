@@ -43,9 +43,9 @@ npm install horizon-youtube-mp3
 horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, data){...});
 ```
 
-**download(url:String, res?:Response, name?:String, cropParams?:Object, callback:Function):Object** => Download a converted MP3 file.
+**download(url:String, res?:Response, name?:String, cropParams?:Object, maxTimeAllowed?:Number, callback:Function):Object** => Download a converted MP3 file.
 ``` js
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, function(err, result){//On Conversion Complete});
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, null, function(err, result){//On Conversion Complete});
 ```
 
 ## Usage Example
