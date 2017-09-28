@@ -12,7 +12,7 @@ var server = http.createServer(function(request, response) {
     var paramsUrl = url.parse(request.url, true).query;
     console.log("URL Video: " + paramsUrl.youtubeURL);
 
-    horizon.download(paramsUrl.youtubeURL, response, null, {start:'02:15', end:'02:20'}, null, function(err, e){
+    horizon.download(paramsUrl.youtubeURL, response, null, null, null, function(err, e){
 
         console.log(e); //Will return: "Downloading file complete!"
 
