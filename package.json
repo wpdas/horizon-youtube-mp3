@@ -1,6 +1,6 @@
 {
   "name": "horizon-youtube-mp3",
-  "version": "1.3.8",
+  "version": "1.4.0",
   "description": "Search for video information and download mp3 file through video.",
   "main": "./lib/index.js",
   "author": {
