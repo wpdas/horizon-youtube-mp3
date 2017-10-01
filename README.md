@@ -28,7 +28,6 @@ Most features should work when using avconv and avprobe instead of ffmpeg and ff
 - Convert video from youtube in mp3 files (128 kBit/s) in realtime;
 - Pipe stream of converted bytes;
 - Crop time (start and end time);
-- When used to download on server, it supports downloading the same audio without overwriting another (if 2 or more people are downloading the same audio).
 
 With [npm](https://www.npmjs.com/) do:
 
@@ -38,35 +37,53 @@ npm install horizon-youtube-mp3
 
 ## API
 
-**getInfo(url:String, callback:Function):Object** => Get information from video.
+getInfo(url:String, callback:Function) => Get information from video.
 ``` js
 horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, data){...});
 ```
 
-**download(url:String, res?:Response, name?:String, cropParams?:Object, maxTimeAllowed?:Number, callback:Function):Object** => Download a converted MP3 file.
+download(url:String, res:Response, name?:String, cropParams?:Object, maxTimeAllowed?:Number, callback:Function) => Download a converted MP3 file.
 ``` js
 horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, null, function(err, result){//On Conversion Complete});
 ```
 
-## Usage Example
+Type of errors callback:
+```
+log.info(horizon.errorsType)...
+
+LONG_VIDEO_TIME;          => Video time is longer than allowed.
+ERROR_ON_GET_INFO;        => Error on get info.
+VIDEO_DOES_NOT_EXIST;     => Video does not exist.
+ERROR_PROCESSING_VIDEO:   => Internal Server Error on Processing Video.
+URL_VIDEO_NOT_DEFINED;    => Url Video Not Defined.
+```
+
+Type of success callback
+```
+log.info(horizon.successType)...
+
+CONVERSION_FILE_COMPLETE; => Conversion File Complete (and sent in response)
+```
+
+## Usage Examples
 ### Get info from video.
 
 ``` js
-var horizon = require('horizon-youtube-mp3');
+var horizon = require('../lib/index');
+var log = require('console-log-level')({ level: 'info' });
 
-horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, e){
+horizon.getInfo('http://youtube.com/watch?v=NEA0BLnpOtg', function(err, e){
 
-    console.log(e);
+  log.info(e);
 
-    /**
+  /**
      * Will Return:
      *
      * { isValid: true,
      *   videoName: 'OZIELZINHO - TOP GEAR 2.0',
      *   videoThumb: 'https://i.ytimg.com/vi/NEA0BLnpOtg/hqdefault.jpg?custom=true&w=320&h=180&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FoGsoudXCGPU-Fb6epRh1eIzVDs',
      *   videoTime: '2:35',
-     *   videoTimeSec: 155,
-     *   videoFile: 'https://....'}
+      *  videoFile: 'https://....'}
      */
 });
 ```
@@ -74,29 +91,34 @@ horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, e){
 ### Use for server-side processing and client-side downloading
 
 ``` js
-var horizon = require('horizon-youtube-mp3');
-var path = require('path');
-var http = require("http");
+var horizon = require('../lib/index');
+var http = require('http');
 var url  = require('url') ;
+var log = require('console-log-level')({ level: 'info' });
 
 var server = http.createServer(function(request, response) {
 
-    let paramsUrl = url.parse(request.url, true).query;
-    console.log("URL Video: " + paramsUrl.youtubeURL);
+  var paramsUrl = url.parse(request.url, true).query;
+  log.info('URL Video: ' + paramsUrl.youtubeURL);
 
-    let cropParams = {start:'02:15', end:'02:20'}; //Optional
+  //var cropParams = {start:'02:15', end:'02:20'}; //Optional
+  var cropParams = null;
 
-    horizon.download(paramsUrl.youtubeURL, response, null, cropParams, function(err, e){
+  horizon.download(paramsUrl.youtubeURL, response, null, cropParams, null, function(err, e){
 
-        console.log(e); //Will return: "Downloading file complete!"
+    if(err) {
+      return log.info(err);
+    }
 
-        //Your code here...
-    });
+    if(e === horizon.successType.CONVERSION_FILE_COMPLETE){
+      log.info(e);
+    }
+  });
 });
 
 server.listen(3000);
-console.log("Server running!");
-console.log("Put on browser: http://localhost:3000/?youtubeURL=http://youtube.com/watch?v=NEA0BLnpOtg");
+log.info('Server running!');
+log.info('Put on browser: http://localhost:3000/?youtubeURL=http://youtube.com/watch?v=NEA0BLnpOtg');
 ```
 
 # License

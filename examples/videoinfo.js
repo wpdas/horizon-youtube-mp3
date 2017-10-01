@@ -1,14 +1,13 @@
-/**
- * Created by wendersonpires on 27/11/16.
- */
+'use strict';
 
 var horizon = require('../lib/index');
+var log = require('console-log-level')({ level: 'info' });
 
-horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, e){
+horizon.getInfo('http://youtube.com/watch?v=NEA0BLnpOtg', function(err, e){
 
-    console.log(e);
+  log.info(e);
 
-    /**
+  /**
      * Will Return:
      *
      * { isValid: true,
