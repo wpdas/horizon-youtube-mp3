@@ -42,13 +42,25 @@ getInfo(url:String, callback:Function) => Get information from video.
 horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, data){...});
 ```
 
-download(url:String, res:Response, name?:String, cropParams?:Object, maxTimeAllowed?:Number, callback:Function) => Download a converted MP3 file.
+download(url:String, res:Response, name?:String, cropParams?:Object, maxTimeAllowed?:Number, showSize?:Boolean, callback:Function) => Download a converted MP3 file.
+
+Params Info:
+``` txt
+url = Url Youtube video;
+res = API Response (example express);
+name = A default name for the audio file;
+cropParams = Crop params;
+maxTimeAllowed = Total time from video allowed (seconds);
+showSize = Show size of file during download (consumes memory);
+callback = Call on dowload file is complete;
+```
+
 ``` js
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, null, function(err, result){//On Conversion Complete});
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, null, false, function(err, result){//On Conversion Complete});
 ```
 
 Type of errors callback:
-```
+``` js
 log.info(horizon.errorsType)...
 
 LONG_VIDEO_TIME;          => Video time is longer than allowed.
@@ -59,7 +71,7 @@ URL_VIDEO_NOT_DEFINED;    => Url Video Not Defined.
 ```
 
 Type of success callback
-```
+``` js
 log.info(horizon.successType)...
 
 CONVERSION_FILE_COMPLETE; => Conversion File Complete (and sent in response)
@@ -104,7 +116,7 @@ var server = http.createServer(function(request, response) {
   //var cropParams = {start:'02:15', end:'02:20'}; //Optional
   var cropParams = null;
 
-  horizon.download(paramsUrl.youtubeURL, response, null, cropParams, null, function(err, e){
+  horizon.download(paramsUrl.youtubeURL, response, null, cropParams, null, false, function(err, e){
 
     if(err) {
       return log.info(err);

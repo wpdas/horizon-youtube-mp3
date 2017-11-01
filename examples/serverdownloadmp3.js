@@ -13,7 +13,7 @@ var server = http.createServer(function(request, response) {
   //var cropParams = {start:'02:15', end:'02:20'}; //Optional
   var cropParams = null;
 
-  horizon.download(paramsUrl.youtubeURL, response, null, cropParams, null, function(err, e){
+  horizon.download(paramsUrl.youtubeURL, response, null, cropParams, null, true, function(err, e){
 
     if(err) {
       return log.info(err);
