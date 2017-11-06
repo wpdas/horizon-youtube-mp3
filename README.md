@@ -95,7 +95,10 @@ horizon.getInfo('http://youtube.com/watch?v=NEA0BLnpOtg', function(err, e){
      *   videoName: 'OZIELZINHO - TOP GEAR 2.0',
      *   videoThumb: 'https://i.ytimg.com/vi/NEA0BLnpOtg/hqdefault.jpg?custom=true&w=320&h=180&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FoGsoudXCGPU-Fb6epRh1eIzVDs',
      *   videoTime: '2:35',
-      *  videoFile: 'https://....'}
+     *   videoTimeSec 244,
+     *   videoThumbList: {sd: 'http...', mq: 'http...', hq: 'http...', hd: 'http...'},
+     *   videoFile: 'https://....'
+     *   videoFormats: [...]}
      */
 });
 ```
