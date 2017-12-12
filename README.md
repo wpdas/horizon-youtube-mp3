@@ -27,7 +27,8 @@ Most features should work when using avconv and avprobe instead of ffmpeg and ff
 
 - Convert video from youtube in mp3 files (128 kBit/s) in realtime;
 - Pipe stream of converted bytes;
-- Crop time (start and end time);
+- Save file in local folder (New);
+- Crop time (start and end time).
 
 With [npm](https://www.npmjs.com/) do:
 
@@ -37,43 +38,80 @@ npm install horizon-youtube-mp3
 
 ## API
 
-getInfo(url:String, callback:Function) => Get information from video.
+Get info parameters:
+```js
+horizon.getInfo(url:String, callback:Function) => Get information from video.
+```
+
+Example:
 ``` js
+// Get video information
 horizon.getInfo("http://youtube.com/watch?v=NEA0BLnpOtg", function(err, data){...});
 ```
 
-download(url:String, res:Response, name?:String, cropParams?:Object, maxTimeAllowed?:Number, showSize?:Boolean, callback:Function) => Download a converted MP3 file.
+Download parameters (server):
+```js
+//Convert and send bytes to stream (download mp3 on client side)
+horizon.download(
+  videoURL:String,
+  res:Response,
+  optionalName?:String,
+  cropParams?:Object,
+  maxTimeAllowed?:Number,
+  showSize?:Boolean,
+  callback?:Function
+  );
+```
+
+Example:
+``` js
+horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, null, false, function(err, result){
+  //On Conversion Complete
+});
+```
+
+Download to Local parameters (local):
+```js
+//Convert video and save the final file in local path.
+horizon.downloadToLocal(
+  videoURL:String,
+  directory:String,
+  optionalName?:String,
+  cropParams?:Object,
+  maxTimeAllowed?:Number,
+  callback?:Function,
+  onProgress?:Function
+  );
+```
 
 Params Info:
 ``` txt
-url = Url Youtube video;
-res = API Response (example express);
-name = A default name for the audio file;
+videoURL = Url Youtube video;
+res = API Response (to server only);
+directory = Directory to save file (to local only);
+optionalName = A default name for the audio file;
 cropParams = Crop params;
 maxTimeAllowed = Total time from video allowed (seconds);
-showSize = Show size of file during download (consumes memory);
+showSize = Show size of file during download (to server only);
 callback = Call on dowload file is complete;
-```
-
-``` js
-horizon.download("http://youtube.com/watch?v=NEA0BLnpOtg", response, null, {start:'02:15', end:'02:20'}, null, false, function(err, result){//On Conversion Complete});
+onProgress = Show progress of conversion (to local only);
 ```
 
 Type of errors callback:
 ``` js
 log.info(horizon.errorsType)...
-
+NO_DESTINATION;           => When res and directory parameters is not defined.
 LONG_VIDEO_TIME;          => Video time is longer than allowed.
 ERROR_ON_GET_INFO;        => Error on get info.
 VIDEO_DOES_NOT_EXIST;     => Video does not exist.
 ERROR_PROCESSING_VIDEO:   => Internal Server Error on Processing Video.
 URL_VIDEO_NOT_DEFINED;    => Url Video Not Defined.
+MISSING_CROP_PARAMS;      => Missing params on CropParams.
 ```
 
 Type of success callback
 ``` js
 log.info(horizon.successType)...
-
 CONVERSION_FILE_COMPLETE; => Conversion File Complete (and sent in response)
 ```
 
@@ -81,12 +119,11 @@ CONVERSION_FILE_COMPLETE; => Conversion File Complete (and sent in response)
 ### Get info from video.
 
 ``` js
-var horizon = require('../lib/index');
-var log = require('console-log-level')({ level: 'info' });
+var horizon = require('horizon-youtube-mp3');
 
 horizon.getInfo('http://youtube.com/watch?v=NEA0BLnpOtg', function(err, e){
 
-  log.info(e);
+  console.log(e);
 
   /**
      * Will Return:
@@ -106,7 +143,7 @@ horizon.getInfo('http://youtube.com/watch?v=NEA0BLnpOtg', function(err, e){
 ### Use for server-side processing and client-side downloading
 
 ``` js
-var horizon = require('../lib/index');
+var horizon = require('horizon-youtube-mp3');
 var http = require('http');
 var url  = require('url') ;
 var log = require('console-log-level')({ level: 'info' });
@@ -134,6 +171,55 @@ var server = http.createServer(function(request, response) {
 server.listen(3000);
 log.info('Server running!');
 log.info('Put on browser: http://localhost:3000/?youtubeURL=http://youtube.com/watch?v=NEA0BLnpOtg');
+```
+
+### Use for local processing (New)
+
+```js
+var horizon = require('horizon-youtube-mp3');
+var path = require('path');
+
+var downloadPath = path.join(__dirname);
+
+horizon.downloadToLocal(
+  'http://youtube.com/watch?v=NEA0BLnpOtg',
+  downloadPath,
+  null,
+  null,
+  null,
+  onConvertVideoComplete,
+  onConvertVideoProgress
+);
+
+function onConvertVideoComplete(err, result) {
+  console.log(err, result);
+  // Will return...
+  //null, conversionFileComplete
+}
+
+function onConvertVideoProgress(percent, timemark, targetSize) {
+  console.log('Progress:', percent, 'Timemark:', timemark, 'Target Size:', targetSize);
+  // Will return...
+  // Progress: 90.45518257038955 Timemark: 00:02:20.04 Target Size: 2189
+  // Progress: 93.73001672942894 Timemark: 00:02:25.11 Target Size: 2268
+  // Progress: 100.0083970106642 Timemark: 00:02:34.83 Target Size: 2420
+}
+```
+
+## Run examples
+Get video information:
+```
+npm run info
+```
+
+Convert and save file to local folder:
+```
+npm run app
+```
+
+Convert and server bytes stream to client side:
+```
+npm run server
 ```
 
 # License
