@@ -1,7 +1,7 @@
 {
   "name": "horizon-youtube-mp3",
-  "version": "1.9.1",
-  "description": "Search for video information and download mp3 file through video.",
+  "version": "1.9.2",
+  "description": "Search for youtube video information and download mp3 file through video.",
   "main": "./lib/index.js",
   "author": {
     "name": "Wenderson Pires",
