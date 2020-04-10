@@ -2,10 +2,10 @@
 
 Get info and download (server or local) MP3 audio from youtube videos in node.js using horizon-youtube-mp3.
 
-### Main Online App
+### Main Online App (Offline now)
 
 Project developed using this module:
-[YouTube Transfer App Site](http://www.youtubetransfer.com/)
+[YouTube Transfer App Site](#)
 
 ### Prerequisites
 
